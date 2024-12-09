@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Anmation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: rgb(8, 8, 100);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .glowing{
+            display: flex;
+        }
+        span{
+            font-size: 5em;
+            /* margin-left: 5px; */
+            display: inline-block;
+            letter-spacing: 10px;
+            border: 1px solid  yellow;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            animation: animate 5s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                color: red;
+                border: 1px solid red;
+                box-shadow: 0px 10px 20px red;
+            }
+            30%{
+                color: yellow;
+                border: 1px solid yellow;
+                box-shadow: 0px 10px 20px yellow;
+            }
+            70%{
+                color: green;
+                border: 1px solid green;
+                box-shadow: 0px 10px 20px green;
+            } 
+            100%{
+                color: blue;
+                border: 1px solid blue;
+                box-shadow: 0px 10px 20px blue;
+            }
+        }
+        span:nth-child(1){
+            animation-delay: 0.1s;
+        }
+        span:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        span:nth-child(3){
+            animation-delay: 0.3s;
+        }
+        span:nth-child(4){
+            animation-delay: 0.4s;
+        }
+        span:nth-child(5){
+            animation-delay: 0.5s;
+        }
+        span:nth-child(6){
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="glowing">
+        <span>G</span>
+        <span>L</span>
+        <span>O</span>
+        <span>W</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+</html>
